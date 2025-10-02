@@ -7,25 +7,152 @@
         3.2 Other
     4. Areas
         4.1 Header
-        4.2 Introduction
-        etc.
+        4.2 Introductions
+        4.3 Projects
+ */
+
     5. Media Queries
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --text-color: #0C0C0C;
+    --text-light-color: #F2F0FF;
+    --bg-projects: #F3F6F9;
+    --text-service-tiles: #7A7A7A;
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
+
+h1, h2, h3 {
+    font-family: "Merriweather", serif;
+}
+
+button, input {
+    font-family: inherit;
+}
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-width: 0;
+}
+
+.inner-container-small {
+    flex-basis: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+
+}
+
+.inner-container-large {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    border: 2px dashed red;
+
+}
+
+
 
 /* --------------- 3.2 Other --------------------------- */
+button {
+    background-color: var(--pink);
+    color: var(--text-light-color);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border-width: 0;
+    box-shadow: 5px 5px 3px #5722CD ;
+}
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
 
+header {
+    background: #4845E4;
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 40%, rgba(87, 34, 205, 1) 100%);
+    color: var(--text-light-color);
+}
+
+nav {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 300px;
+    font-size: 1rem;
+}
+
+.header-content {
+    padding: 100px 0 180px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.header-content p {
+    padding: 20px
+}
+
+.header-content h1 {
+    padding: 0 30px;
+}
+
+.header-content .image-wrapper {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.header-content img {
+    height: 5rem;
+}
+
 /* --------------- 4.2 Introduction ------------------- */
+.introduction-section .inner-container-small {
+    padding: 50px;
+}
+
+.introduction-section h3 {
+    color: var(--purple);
+    text-align: center;
+    font-weight: 600;
+}
+
+.introduction-section p {
+    font-size: 0.8rem;
+    margin: 40px 0;
+}
+/* --------------- 4.2 Projects ------------------- */
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
