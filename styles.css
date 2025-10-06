@@ -11,6 +11,7 @@
         4.2 Introductions
         4.3 Projects
         4.4 Services
+        4.5 Contact form
  */
 
     /*5. Media Queries*/  /*/
@@ -36,7 +37,7 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 h1, h2, h3 {
@@ -45,6 +46,11 @@ h1, h2, h3 {
 
 button, input {
     font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: var(--purple);
 }
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -84,6 +90,7 @@ button {
     text-transform: uppercase;
     font-size: 0.8rem;
     padding: 15px 30px;
+    margin: 15px;
     border-radius: 50px;
     border-width: 0;
     box-shadow: 5px 5px 3px #5722CD ;
@@ -105,12 +112,18 @@ nav {
     display: flex;
     justify-content: flex-end;
 }
+
 nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
     flex-basis: 300px;
     font-size: 1rem;
+}
+
+nav a {
+    color: var(--text-light-color);
+    text-decoration: none;
 }
 
 .header-content {
@@ -228,7 +241,7 @@ nav ul {
     justify-content: center;
     border: 1px solid var(--purple);
     /*font-size: 0.8rem;*/
-    padding: 0 20px;
+    padding: 0 30px;
     box-shadow: 5px 10px 10px -3px lightgray ;
 }
 
@@ -245,4 +258,49 @@ nav ul {
     color: var(--text-service-tiles);
 }
 
+/* --------------- 4.5 Contact form ------------------- */
+
+.contact-form {
+    background: #4845E4;
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 40%, rgba(87, 34, 205, 1) 100%);
+    color: var(--text-light-color);
+}
+.contact-form p {
+    padding: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    margin: 10px;
+}
+.contact-form .inner-container-small {
+    padding: 40px 0;
+}
+/* --------------- 4.6 Footer ------------------- */
+footer {
+    background-color: #0C0C0C;
+    color: var(--text-light-color);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 15px;
+}
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 770px) {
+    .projects {
+        flex-direction: column;
+    }
+
+    .projects:nth-child(even) {
+
+        flex-direction: column;
+    }
+}
