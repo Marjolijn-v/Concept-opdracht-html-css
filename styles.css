@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -9,10 +10,10 @@
         4.1 Header
         4.2 Introductions
         4.3 Projects
+        4.4 Services
  */
 
-    5. Media Queries
-////////////////////////*/
+    /*5. Media Queries*/  /*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 * {
@@ -32,11 +33,10 @@
 }
 
 /* ------------------------------- 2. Typography ----------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     font-family: "Roboto", sans-serif;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 h1, h2, h3 {
@@ -71,7 +71,7 @@ button, input {
     flex-direction: column;
     align-items: center;
     margin: 0 20px;
-    border: 2px dashed red;
+    /*border: 2px dashed red;*/
 
 }
 
@@ -147,12 +147,61 @@ nav ul {
     color: var(--purple);
     text-align: center;
     font-weight: 600;
+    margin: 10px;
 }
 
 .introduction-section p {
     font-size: 0.8rem;
     margin: 40px 0;
 }
-/* --------------- 4.2 Projects ------------------- */
+/* --------------- 4.3 Projects ------------------- */
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*border: 2px solid black;*/
+}
+
+.projects:nth-child(even) {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+.image-wrapper img {
+    width: 100%;
+    box-shadow: 0 10px 8px -3px var(--text-service-tiles);
+}
+
+.image-wrapper {
+    flex-basis: 50%;
+    margin: 20px;
+    /*border: 2px solid orange;*/
+}
+
+.project-text {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding:0 50px 0 0;
+    margin: 20px;
+    /*border: 2px solid deeppink;*/
+}
+
+.project-text img {
+    max-width: 40px;
+    padding: 30px 0;
+}
+
+.project-text a {
+    text-transform: uppercase;
+    padding: 30px 0;
+}
+
+/* --------------- 4.4 Services ------------------- */
+
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
