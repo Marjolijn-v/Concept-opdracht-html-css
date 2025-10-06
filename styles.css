@@ -155,10 +155,16 @@ nav ul {
     margin: 40px 0;
 }
 /* --------------- 4.3 Projects ------------------- */
+.projects-section {
+    background-color: var(--bg-projects);
+    padding: 50px 0;
+}
+
 .projects {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 20px 0;
     /*border: 2px solid black;*/
 }
 
@@ -168,23 +174,23 @@ nav ul {
 }
 
 
-.image-wrapper img {
+.projects .image-wrapper img {
     width: 100%;
     box-shadow: 0 10px 8px -3px var(--text-service-tiles);
 }
 
-.image-wrapper {
-    flex-basis: 50%;
+.projects .image-wrapper {
+    flex-basis: 55%;
     margin: 20px;
     /*border: 2px solid orange;*/
 }
 
 .project-text {
-    flex-basis: 50%;
+    flex-basis: 35%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 0.7rem;
+    /*font-size: 0.8rem;*/
     font-weight: 500;
     padding:0 50px 0 0;
     margin: 20px;
@@ -198,10 +204,45 @@ nav ul {
 
 .project-text a {
     text-transform: uppercase;
+    letter-spacing: 0.2rem;
     padding: 30px 0;
 }
 
 /* --------------- 4.4 Services ------------------- */
+.services-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 80px 0;
+    gap: 40px;
+}
 
+.service-tile {
+    flex-basis: 350px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid var(--purple);
+    /*font-size: 0.8rem;*/
+    padding: 0 20px;
+    box-shadow: 5px 10px 10px -3px lightgray ;
+}
+
+.service-tile img {
+    max-width: 50px;
+}
+
+.service-tile h3 {
+    color: var(--purple);
+    padding: 10px 0 20px 0;
+}
+
+.service-tile p {
+    color: var(--text-service-tiles);
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
