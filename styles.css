@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -7,25 +8,319 @@
         3.2 Other
     4. Areas
         4.1 Header
-        4.2 Introduction
-        etc.
-    5. Media Queries
-////////////////////////*/
+        4.2 Introductions
+        4.3 Projects
+        4.4 Services
+        4.5 Contact form
+ */
+
+    /*5. Media Queries*/  /*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --text-color: #0C0C0C;
+    --text-light-color: #F2F0FF;
+    --bg-projects: #F3F6F9;
+    --text-service-tiles: #7A7A7A;
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
 
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, h3 {
+    font-family: "Merriweather", serif;
+}
+
+button, input {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: var(--purple);
+}
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-width: 0;
+}
+
+.inner-container-small {
+    flex-basis: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+
+}
+
+.inner-container-large {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    /*border: 2px dashed red;*/
+}
+
+.arrow-right {
+    width: 100%;
+    height: 0;
+    /*border-left: 50px solid transparent; !* Breedte van de linker schuine rand *!*/
+    border-right: 1670px solid transparent; /* Breedte van de rechter schuine rand */
+    border-bottom: 100px solid white;    /* Hoogte en kleur van de driehoek */
+}
 
 /* --------------- 3.2 Other --------------------------- */
+button {
+    background-color: var(--pink);
+    color: var(--text-light-color);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 15px 30px;
+    margin: 15px;
+    border-radius: 50px;
+    border-width: 0;
+    box-shadow: 5px 5px 3px #5722CD ;
+}
+
+input,textarea {
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
 
+header {
+    background: #4845E4;
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 40%, rgba(87, 34, 205, 1) 100%);
+    color: var(--text-light-color);
+}
+
+nav {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 300px;
+    font-size: 1rem;
+}
+
+nav a {
+    color: var(--text-light-color);
+    text-decoration: none;
+}
+
+.header-content {
+    padding: 100px 0 180px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.header-content p {
+    padding: 20px
+}
+
+.header-content h1 {
+    padding: 0 30px;
+}
+
+.header-content .image-wrapper {
+    position: absolute;
+    bottom: 1px;
+    text-align: center;
+}
+
+.header-content img {
+    height: 5rem;
+}
+
 /* --------------- 4.2 Introduction ------------------- */
+.introduction-section .inner-container-small {
+    padding: 50px;
+}
+
+.introduction-section h3 {
+    color: var(--purple);
+    text-align: center;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.introduction-section p {
+    font-size: 0.8rem;
+    margin: 40px 0;
+}
+/* --------------- 4.3 Projects ------------------- */
+.projects-section {
+    background-color: var(--bg-projects);
+    padding: 50px 0;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
+    /*border: 2px solid black;*/
+}
+
+.projects:nth-child(even) {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+.projects .image-wrapper img {
+    width: 100%;
+    box-shadow: 0 10px 8px -3px var(--text-service-tiles);
+}
+
+.projects .image-wrapper {
+    flex-basis: 55%;
+    margin: 20px;
+    /*border: 2px solid orange;*/
+}
+
+.project-text {
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*font-size: 0.8rem;*/
+    font-weight: 500;
+    padding:0 50px 0 0;
+    margin: 20px;
+    /*border: 2px solid deeppink;*/
+}
+
+.project-text img {
+    max-width: 40px;
+    padding: 30px 0;
+}
+
+.project-text a {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 30px 0;
+}
+
+/* --------------- 4.4 Services ------------------- */
+.services-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 80px 0;
+    gap: 40px;
+}
+
+.service-tile {
+    flex-basis: 350px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid var(--purple);
+    /*font-size: 0.8rem;*/
+    padding: 0 30px;
+    box-shadow: 5px 10px 10px -3px lightgray ;
+}
+
+.service-tile img {
+    max-width: 50px;
+}
+
+.service-tile h3 {
+    color: var(--purple);
+    padding: 10px 0 20px 0;
+}
+
+.service-tile p {
+    color: var(--text-service-tiles);
+}
+
+/* --------------- 4.5 Contact form ------------------- */
+
+.contact-form {
+    background: #4845E4;
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 40%, rgba(87, 34, 205, 1) 100%);
+    color: var(--text-light-color);
+}
+.contact-form p {
+    padding: 20px;
+}
+
+.contact-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    margin: 10px;
+    padding: 20px;
+}
+
+.contact-form .inner-container-small {
+    padding: 40px 0;
+}
+
+.contact-form button {
+    align-self: center;
+}
+/* --------------- 4.6 Footer ------------------- */
+footer {
+    background-color: #0C0C0C;
+    color: var(--text-light-color);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 15px;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+@media screen and (max-width: 770px) {
+    .projects {
+        flex-direction: column;
+    }
+
+    .projects:nth-child(even) {
+
+        flex-direction: column;
+    }
+}
